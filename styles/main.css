@@ -4,9 +4,7 @@ body {
 }
 /* header */
 header img {
-  width: 150px;
-  height: auto;
-  padding: 20px;
+  width: 100%;
 }
 
 /* navigation */

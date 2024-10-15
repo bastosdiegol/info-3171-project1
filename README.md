@@ -15,8 +15,6 @@ Members:
   <li>Diego Lima Bastos</li>
   <li>Felipe Muniz</li>
   <li>Olivia Ruas Guimaraes</li>
-  <li>Rupsagar Shrestha</li>
-  <li>Sandesh Gorathoki</li>
 </ul>
 
 **Project Description:**

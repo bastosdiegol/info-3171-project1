@@ -17,6 +17,31 @@
       padding: 0;
       color: #261C15;
       background-color: #F7F7F2;
+      padding: 20px;
+    }
+
+    /* Header styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #E4E6C3;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #DCD21A;
+    }
+
+    /* Styling the logo */
+    .logo img {
+      max-width: 150px; /* Adjust this value to fit your logo size */
+      height: auto;
+    }
+
+    /* Header text & navigation */
+    .header-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #261C15;
     }
 
     /* Heading 1 */
@@ -68,73 +93,70 @@
 
     /* Flex container for font variants */
     .font-variant {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
 
-        /* Styling for the variant title */
-        .font-variant h2 {
-            font-weight: normal;
-            margin: 0;
-            width: 30%;
-            text-align: left;
-            font-size: 1.5rem;
-        }
+    /* Styling for the variant title */
+    .font-variant h2 {
+        font-weight: normal;
+        margin: 0;
+        width: 30%;
+        text-align: left;
+        font-size: 1.5rem;
+    }
 
-        /* Styling for the paragraph example */
-        .font-variant p {
-            width: 65%;
-            margin: 0;
-        }
+    /* Styling for the paragraph example */
+    .font-variant p {
+        width: 65%;
+        margin: 0;
+    }
 
     /* Font Weight Styles */
-    .font-variant {
-            margin-bottom: 20px;
-        }
+    .light {
+        font-weight: 200; /* Light */
+    }
 
-        .font-variant h2 {
-            font-weight: normal;
-            margin-bottom: 10px;
-        }
+    .regular {
+        font-weight: 400; /* Regular */
+    }
 
-        .light {
-            font-weight: 200; /* Light */
-        }
+    .semibold {
+        font-weight: 600; /* Semi-bold */
+    }
 
-        .regular {
-            font-weight: 400; /* Regular */
-        }
-
-        .semibold {
-            font-weight: 600; /* Semi-bold */
-        }
-
-        .bold {
-            font-weight: 700; /* Bold */
-        }
+    .bold {
+        font-weight: 700; /* Bold */
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <!-- Replace with the path to your logo -->
+      <img src="./images/logo.png" alt="DailyTube Logo">
+    </div>
+    <div class="header-text">
+      DailyTube Typography
+    </div>
+  </header>
+
   <!-- Main Content -->
   <br class="container">
-    <h1>DailyTube Typography</h1>
 
     <p>For apps and websites, use the Google font <a href="https://fonts.google.com/specimen/Dosis">Dosis</a>.</p>
     <p>Dosis a geometric sans-serif typeface designed by Pablo Impallari. It features rounded, clean, and friendly letterforms, making it highly suitable for both digital and print media. Originally designed for web and user interface design, Dosis provides excellent legibility at various sizes and across different devices. Its subtle rounded corners give it an inviting, creative look, while its geometric structure maintains professionalism and precision.</p>
 
     <!-- Heading 1 -->
     <h1>Heading 1</h1>
-    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, ligula ut elementum pharetra, justo odio rhoncus nisl, quis suscipit justo ante eget purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis nulla id eros posuere suscipit. </br>
-        Duis vestibulum suscipit mauris non dapibus. Quisque vel massa eu metus iaculis varius vel sit amet leo. Curabitur placerat orci dui, in feugiat massa vestibulum malesuada. Fusce maximus dictum blandit. Etiam nec sollicitudin tortor, quis pretium risus. Integer viverra molestie arcu in tincidunt. Morbi a malesuada ex. Suspendisse aliquam dui scelerisque sodales posuere. Mauris commodo luctus ipsum, non mollis ex aliquet vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas quis lectus eget massa fringilla lobortis elementum in nibh. Nulla malesuada sodales nisi, cursus maximus urna convallis ut. Etiam ultricies felis sed neque iaculis, pellentesque suscipit tortor fermentum. Etiam bibendum sapien suscipit pulvinar tincidunt.</br>      
-        Etiam elementum cursus ex. Morbi laoreet varius ex, vel aliquam leo rutrum vitae. Mauris vel leo vel lectus euismod venenatis eu quis tortor.  In ullamcorper dictum purus sed vehicula. Duis eget quam euismod, vehicula mi vel, malesuada neque. In hac habitasse platea dictumst. Cras vulputate fringilla ante, eget vestibulum lacus porttitor a. Integer ac ante a nunc facilisis egestas. Sed gravida posuere ex, quis semper mauris porta vitae. Vivamus id luctus dolor. Aliquam sollicitudin euismod tellus, eu vulputate odio faucibus vel. Integer blandit leo nibh, sit amet viverra sapien dictum at. Etiam ut tincidunt sem, a tincidunt turpis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, ligula ut elementum pharetra, justo odio rhoncus nisl, quis suscipit justo ante eget purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis nulla id eros posuere suscipit. Duis vestibulum suscipit mauris non dapibus. Quisque vel massa eu metus iaculis varius vel sit amet leo. Curabitur placerat orci dui, in feugiat massa vestibulum malesuada. Fusce maximus dictum blandit. Etiam nec sollicitudin tortor, quis pretium risus. Integer viverra molestie arcu in tincidunt. Morbi a malesuada ex. Suspendisse aliquam dui scelerisque sodales posuere. Mauris commodo luctus ipsum, non mollis ex aliquet vitae.</p>
 
     <!-- Heading 2 -->
     <h2>Heading 2</h2>
-    
-    <!-- Paragraph & Lists -->
     <p>Marius ullamcorper, justo id luctus rutrum, lorem odio faucibus est, et posuere augue turpis eu nisl.</p>
     <ul>
         <li>Curabitur venenatis felis a ultrices varius.</li>
@@ -155,25 +177,21 @@
     <div class="font-variant">
         <h2>Light</h2>
         <p class="light">This is the light variant (200 weight) of the Dosis font.</p>
-        <hr>
     </div>
 
     <div class="font-variant">
         <h2>Regular</h2>
         <p class="regular">This is the regular variant (400 weight) of the Dosis font.</p>
-        <hr>
     </div>
 
     <div class="font-variant">
         <h2>Semi-Bold</h2>
         <p class="semibold">This is the semi-bold variant (600 weight) of the Dosis font.</p>
-        <hr>
     </div>
 
     <div class="font-variant">
         <h2>Bold</h2>
         <p class="bold">This is the bold variant (700 weight) of the Dosis font.</p>
-        <hr>
     </div>
 
   <!-- Footer -->

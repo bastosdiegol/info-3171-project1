@@ -1,0 +1,119 @@
+:root {
+  /* Overriding Bootstrap color variables */
+  --bs-primary: var(--primary);
+  --bs-secondary: var(--info);
+  --bs-info: var(--light);
+  --bs-light: var(--light);
+  --bs-dark: var(--dark);
+
+  /* CSS Gradients */
+  --gradient-top: linear-gradient(
+    0deg,
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+  --gradient-right: linear-gradient(
+    90deg,
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+  --gradient-bottom: linear-gradient(
+    180deg,
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+  --gradient-left: linear-gradient(
+    270deg,
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+  --gradient-top-right: linear-gradient(
+    45deg,
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+  --gradient-bottom-right: linear-gradient(
+    135deg,
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+  --gradient-top-left: linear-gradient(
+    225deg,
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+  --gradient-bottom-left: linear-gradient(
+    315deg,
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+  --gradient-radial: radial-gradient(
+    #dcd21aff,
+    #ffbd59ff,
+    #f7f7f2ff,
+    #e4e6c3ff,
+    #261c15ff
+  );
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--info) !important;
+}
+
+.text-info {
+  color: var(--light) !important;
+}
+
+/* Custom Background Colors */
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(255, 189, 89, 0.1) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.bg-secondary-subtle {
+  background-color: rgba(220, 210, 26, 0.1) !important;
+}
+
+.bg-info {
+  background-color: var(--info) !important;
+}
+
+.bg-info-subtle {
+  background-color: rgba(228, 230, 195, 0.1) !important;
+}

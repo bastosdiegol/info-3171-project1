@@ -38,23 +38,33 @@
             <li class="nav-item">
               <a
                 class="nav-link text-white active"
+                aria-current="page"
                 href="#"
-                data-section="identity"
+                data-content="./content/identity.html"
                 >Visual identity</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#" data-section="ux"
+              <a
+                class="nav-link text-white"
+                href="#"
+                data-content="./content/ux.html"
                 >User Experience Design</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#" data-section="content"
+              <a
+                class="nav-link text-white"
+                href="#"
+                data-content="./content/content.html"
                 >Content</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#" data-section="components"
+              <a
+                class="nav-link text-white"
+                href="#"
+                data-content="./content/components.html"
                 >Components</a
               >
             </li>
@@ -62,23 +72,8 @@
         </nav>
       </div>
     </header>
-    <main id="main-content" class="container mt-4 d-flex w-75 m-auto">
-      <!-- Visual Identity -->
-      <section id="identity" class="container">
-        <h1>Visual Identity</h1>
-      </section>
-      <!-- User Experience Design -->
-      <section id="ux" class="container d-none">
-        <h1>User Experience Design</h1>
-      </section>
-      <!-- Content -->
-      <section id="content" class="container d-none">
-        <h1>Content</h1>
-      </section>
-      <!-- Components -->
-      <section id="components" class="container d-none">
-        <h1>Components</h1>
-      </section>
+    <main class="d-flex w-75 m-auto">
+      <div id="content-area" class="mt-4"></div>
     </main>
   </body>
 </html>

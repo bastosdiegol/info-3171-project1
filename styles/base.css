@@ -16,5 +16,15 @@ li {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--licorice);
+}
+
+:root{
+  --citrine: #dcd21aff;
+--licorice: #261c15ff;
+--baby-powder: #f7f7f2ff;
+--beige: #e4e6c3ff;
+--primary: #ffbd59ff;
+
 }

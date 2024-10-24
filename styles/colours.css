@@ -5,6 +5,14 @@
   --bs-info: var(--light);
   --bs-light: var(--light);
   --bs-dark: var(--dark);
+  
+  --bs-btn-bg: var(--primary); /* Background color for default buttons */
+  --bs-btn-border-color: var(--primary); /* Border color for default buttons */
+  --bs-btn-hover-bg: var(--secondary); /* Background color on hover */
+  --bs-btn-hover-border-color: var(--secondary); /* Border color on hover */
+  --bs-btn-active-bg: var(--info); /* Background color when button is active */
+  --bs-btn-active-border-color: var(--info); /* Border color when button is active */
+  --bs-btn-focus-shadow-rgb: var(--light); /* Shadow color when button is focused */
 
   /* CSS Gradients */
   --gradient-top: linear-gradient(
@@ -116,4 +124,12 @@
 
 .bg-info-subtle {
   background-color: rgba(228, 230, 195, 0.1) !important;
+}
+.btn-primary {
+  --bs-btn-bg: var(--primary) !important;
+  --bs-btn-border-color: var(--primary) !important;
+  --bs-btn-hover-bg: var(--secondary) !important;
+  --bs-btn-hover-border-color: var(--secondary) !important;
+  --bs-btn-active-bg: var(--info) !important;
+  --bs-btn-active-border-color: var(--info) !important;
 }

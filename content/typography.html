@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography Example - Dosis Font & Custom Palette</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+
+  <style>
+    /* Font Settings */
+    body {
+      font-family: 'Dosis', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #261C15;
+      background-color: #F7F7F2;
+    }
+
+    /* Heading 1 */
+    h1 {
+      font-size: 32px;
+      font-weight: 700; /* Bold */
+      color: #261C15;
+      margin-bottom: 16px;
+    }
+
+    /* Heading 2 */
+    h2 {
+      font-size: 24px;
+      font-weight: 600; /* Semi-bold */
+      color: #DCD21A;
+      margin-bottom: 12px;
+    }
+
+    /* Paragraphs */
+    p {
+      font-size: 16px;
+      font-weight: 400; /* Regular font weight */
+      color: #261C15;
+      margin-bottom: 20px;
+    }
+
+    /* Button Styling */
+    button {
+      font-size: 14px;
+      font-weight: 600; /* Semi-bold */
+      padding: 10px 20px;
+      background-color: #FFBD59 /*var(--citrine) */;
+      color: #261C15;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    /* Footer Text */
+    footer {
+      font-size: 12px;
+      font-weight: 400;
+      color: #261C15;
+      text-align: center;
+      padding: 20px;
+      background-color: #E4E6C3;
+      border-top: 1px solid #DCD21A;
+    }
+
+    /* Flex container for font variants */
+    .font-variant {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        /* Styling for the variant title */
+        .font-variant h2 {
+            font-weight: normal;
+            margin: 0;
+            width: 30%;
+            text-align: left;
+            font-size: 1.5rem;
+        }
+
+        /* Styling for the paragraph example */
+        .font-variant p {
+            width: 65%;
+            margin: 0;
+        }
+
+    /* Font Weight Styles */
+    .font-variant {
+            margin-bottom: 20px;
+        }
+
+        .font-variant h2 {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .light {
+            font-weight: 200; /* Light */
+        }
+
+        .regular {
+            font-weight: 400; /* Regular */
+        }
+
+        .semibold {
+            font-weight: 600; /* Semi-bold */
+        }
+
+        .bold {
+            font-weight: 700; /* Bold */
+        }
+  </style>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <br class="container">
+    <h1>DailyTube Typography</h1>
+
+    <p>For apps and websites, use the Google font <a href="https://fonts.google.com/specimen/Dosis">Dosis</a>.</p>
+    <p>Dosis a geometric sans-serif typeface designed by Pablo Impallari. It features rounded, clean, and friendly letterforms, making it highly suitable for both digital and print media. Originally designed for web and user interface design, Dosis provides excellent legibility at various sizes and across different devices. Its subtle rounded corners give it an inviting, creative look, while its geometric structure maintains professionalism and precision.</p>
+
+    <!-- Heading 1 -->
+    <h1>Heading 1</h1>
+    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, ligula ut elementum pharetra, justo odio rhoncus nisl, quis suscipit justo ante eget purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis nulla id eros posuere suscipit. </br>
+        Duis vestibulum suscipit mauris non dapibus. Quisque vel massa eu metus iaculis varius vel sit amet leo. Curabitur placerat orci dui, in feugiat massa vestibulum malesuada. Fusce maximus dictum blandit. Etiam nec sollicitudin tortor, quis pretium risus. Integer viverra molestie arcu in tincidunt. Morbi a malesuada ex. Suspendisse aliquam dui scelerisque sodales posuere. Mauris commodo luctus ipsum, non mollis ex aliquet vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas quis lectus eget massa fringilla lobortis elementum in nibh. Nulla malesuada sodales nisi, cursus maximus urna convallis ut. Etiam ultricies felis sed neque iaculis, pellentesque suscipit tortor fermentum. Etiam bibendum sapien suscipit pulvinar tincidunt.</br>      
+        Etiam elementum cursus ex. Morbi laoreet varius ex, vel aliquam leo rutrum vitae. Mauris vel leo vel lectus euismod venenatis eu quis tortor.  In ullamcorper dictum purus sed vehicula. Duis eget quam euismod, vehicula mi vel, malesuada neque. In hac habitasse platea dictumst. Cras vulputate fringilla ante, eget vestibulum lacus porttitor a. Integer ac ante a nunc facilisis egestas. Sed gravida posuere ex, quis semper mauris porta vitae. Vivamus id luctus dolor. Aliquam sollicitudin euismod tellus, eu vulputate odio faucibus vel. Integer blandit leo nibh, sit amet viverra sapien dictum at. Etiam ut tincidunt sem, a tincidunt turpis.</p>
+
+    <!-- Heading 2 -->
+    <h2>Heading 2</h2>
+    
+    <!-- Paragraph & Lists -->
+    <p>Marius ullamcorper, justo id luctus rutrum, lorem odio faucibus est, et posuere augue turpis eu nisl.</p>
+    <ul>
+        <li>Curabitur venenatis felis a ultrices varius.</li>
+        <li>Donec vel dui nec risus malesuada suscipit eu sit amet dolor.</li>
+            <ul>
+                <li>Vestibulum suscipit gravida nisl non viverra.</li>
+                <li>Nullam malesuada dolor nec justo tincidunt porttitor.</li>
+                <li>Fusce non dui sit amet neque pharetra dictum at et metus.</li>
+            </ul>
+        <li>Cras consectetur ex vel turpis convallis, venenatis maximus eros rutrum.</li>
+        <li>Ut tincidunt massa ut est laoreet, in pharetra metus blandit.</li>
+        <li>Sed aliquam ex ut ligula dictum tincidunt.</li>
+    </ul>
+
+    <!-- Weight Variants -->
+    <h1>Typography Variants in Dosis</h1>
+
+    <div class="font-variant">
+        <h2>Light</h2>
+        <p class="light">This is the light variant (200 weight) of the Dosis font.</p>
+        <hr>
+    </div>
+
+    <div class="font-variant">
+        <h2>Regular</h2>
+        <p class="regular">This is the regular variant (400 weight) of the Dosis font.</p>
+        <hr>
+    </div>
+
+    <div class="font-variant">
+        <h2>Semi-Bold</h2>
+        <p class="semibold">This is the semi-bold variant (600 weight) of the Dosis font.</p>
+        <hr>
+    </div>
+
+    <div class="font-variant">
+        <h2>Bold</h2>
+        <p class="bold">This is the bold variant (700 weight) of the Dosis font.</p>
+        <hr>
+    </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 DailyTube. All rights reserved.
+  </footer>
+
+</body>
+</html>

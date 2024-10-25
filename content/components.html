@@ -20,8 +20,9 @@
         <button class="btn btn-success">Success Button</button>
     </div>
     <div class="mb-3">
-        <label class="form-check-label me-2">Checkbox:</label>
-        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label me-2">Checkbox:
+            <input type="checkbox" class="form-check-input">
+        </label>
     </div>
     <div class="mb-3">
         <label class="form-check-label me-2">Radio:</label>
@@ -34,7 +35,9 @@
     <h2>Textboxes</h2>
     <p>Provide designs for textboxes used to enter data in forms.</p>
     <div class="mb-4">
+      <label>
         <input type="text" class="form-control" placeholder="Enter text here">
+      </label>
     </div>
 
     <!-- Dropdowns -->
@@ -55,8 +58,14 @@
     <h2>Tooltips</h2>
     <p>Create a pattern for how tooltips appear on charts, including font size, colour, and the type of data
         displayed.</p>
-    <button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip example">
-        Hover for Tooltip
+    <button
+      type="button"
+      class="btn btn-info"
+      data-bs-toggle="tooltip"
+      data-bs-custom-class="custom-tooltip"
+      data-bs-placement="top"
+      title="Tooltip example">
+      Hover for Tooltip
     </button>
 
 </section>

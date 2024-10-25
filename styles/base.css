@@ -29,6 +29,11 @@ a {
   color: var(--dark);
 }
 
+/* Div Clear - Float Hack */
+.clear {
+  clear: both;
+}
+
 /* Font Settings */
 body {
   font-family: 'Dosis', sans-serif;

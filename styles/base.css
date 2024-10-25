@@ -20,11 +20,16 @@ html {
   font-style: normal;
 }
 
-li {
+nav li {
   list-style: none;
 }
 
 a {
   text-decoration: none;
   color: var(--dark);
+}
+
+/* Div Clear - Float Hack */
+.clear {
+  clear: both;
 }

@@ -14,6 +14,7 @@ Members:
   <li>Bruno Ribeiro da Silva</li>
   <li>Diego Lima Bastos</li>
   <li>Felipe Muniz</li>
+  <li>Mikhail Kulebiakin</li>
   <li>Olivia Ruas Guimaraes</li>
 </ul>
 

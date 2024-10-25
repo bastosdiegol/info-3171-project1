@@ -3,142 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typography Example - Dosis Font & Custom Palette</title>
-
+  <title>DailyTube Typography</title>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/base.css">
-
-  <style>
-    /* Font Settings */
-    body {
-      font-family: 'Dosis', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: #261C15;
-      background-color: #F7F7F2;
-      padding: 20px;
-    }
-
-    /* Header styling */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #E4E6C3;
-      padding: 10px 20px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #DCD21A;
-    }
-
-    /* Styling the logo */
-    .logo img {
-      max-width: 150px; /* Adjust this value to fit your logo size */
-      height: auto;
-    }
-
-    /* Header text & navigation */
-    .header-text {
-      font-size: 24px;
-      font-weight: 700;
-      color: #261C15;
-    }
-
-    /* Heading 1 */
-    h1 {
-      font-size: 32px;
-      font-weight: 700; /* Bold */
-      color: #261C15;
-      margin-bottom: 16px;
-    }
-
-    /* Heading 2 */
-    h2 {
-      font-size: 24px;
-      font-weight: 600; /* Semi-bold */
-      color: #DCD21A;
-      margin-bottom: 12px;
-    }
-
-    /* Paragraphs */
-    p {
-      font-size: 16px;
-      font-weight: 400; /* Regular font weight */
-      color: #261C15;
-      margin-bottom: 20px;
-    }
-
-    /* Button Styling */
-    button {
-      font-size: 14px;
-      font-weight: 600; /* Semi-bold */
-      padding: 10px 20px;
-      background-color: #FFBD59 /*var(--citrine) */;
-      color: #261C15;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    /* Footer Text */
-    footer {
-      font-size: 12px;
-      font-weight: 400;
-      color: #261C15;
-      text-align: center;
-      padding: 20px;
-      background-color: #E4E6C3;
-      border-top: 1px solid #DCD21A;
-    }
-
-    /* Flex container for font variants */
-    .font-variant {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-    }
-
-    /* Styling for the variant title */
-    .font-variant h2 {
-        font-weight: normal;
-        margin: 0;
-        width: 30%;
-        text-align: left;
-        font-size: 1.5rem;
-    }
-
-    /* Styling for the paragraph example */
-    .font-variant p {
-        width: 65%;
-        margin: 0;
-    }
-
-    /* Font Weight Styles */
-    .light {
-        font-weight: 200; /* Light */
-    }
-
-    .regular {
-        font-weight: 400; /* Regular */
-    }
-
-    .semibold {
-        font-weight: 600; /* Semi-bold */
-    }
-
-    .bold {
-        font-weight: 700; /* Bold */
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/base.css">
 </head>
-<body>
 
   <!-- Header Section -->
   <header>
     <div class="logo">
       <!-- Replace with the path to your logo -->
-      <img src="./images/logo.png" alt="DailyTube Logo">
+      <img src="../images/logo.png" alt="DailyTube Logo">
     </div>
     <div class="header-text">
       DailyTube Typography
@@ -160,16 +34,17 @@
     <p>Marius ullamcorper, justo id luctus rutrum, lorem odio faucibus est, et posuere augue turpis eu nisl.</p>
     <ul>
         <li>Curabitur venenatis felis a ultrices varius.</li>
-        <li>Donec vel dui nec risus malesuada suscipit eu sit amet dolor.</li>
-            <ul>
-                <li>Vestibulum suscipit gravida nisl non viverra.</li>
-                <li>Nullam malesuada dolor nec justo tincidunt porttitor.</li>
-                <li>Fusce non dui sit amet neque pharetra dictum at et metus.</li>
-            </ul>
+        <li>Donec vel dui nec risus malesuada suscipit eu sit amet dolor.
+        <ul>
+            <li>Vestibulum suscipit gravida nisl non viverra.</li>
+            <li>Nullam malesuada dolor nec justo tincidunt porttitor.</li>
+            <li>Fusce non dui sit amet neque pharetra dictum at et metus.</li>
+        </ul></li>
         <li>Cras consectetur ex vel turpis convallis, venenatis maximus eros rutrum.</li>
         <li>Ut tincidunt massa ut est laoreet, in pharetra metus blandit.</li>
         <li>Sed aliquam ex ut ligula dictum tincidunt.</li>
     </ul>
+    </br>
 
     <!-- Weight Variants -->
     <h1>Typography Variants in Dosis</h1>
@@ -193,11 +68,6 @@
         <h2>Bold</h2>
         <p class="bold">This is the bold variant (700 weight) of the Dosis font.</p>
     </div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2024 DailyTube. All rights reserved.
-  </footer>
 
 </body>
 </html>

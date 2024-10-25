@@ -161,3 +161,41 @@ ul li::marker {
 .bold {
   font-weight: 700; /* Bold */
 }
+
+/* Colour Card */
+.color-card {
+  width: 18rem;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px 20px 10px;
+}
+
+.color-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 40px;
+}
+
+/* Colour information section */
+.color-info {
+  padding: 15px;
+  color: var(--dark);
+}
+
+.color-info h5 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  color: inherit;
+}
+
+.intro-paragraph {
+  margin: 20px 20px;
+}
+
+.container > p {
+  margin: 20px;
+}

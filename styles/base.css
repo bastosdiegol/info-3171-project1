@@ -73,7 +73,7 @@ header {
 h1 {
   font-size: 32px;
   font-weight: 700; /* Bold */
-  color: var(--dark);
+  color: var(--primary);
   margin-bottom: 16px;
 }
 

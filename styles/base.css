@@ -36,13 +36,10 @@ a {
 
 /* Font Settings */
 body {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
   color: var(--dark);
   background-color: var(--light);
-  padding: 20px;
 }
 
 /* Header styling */
@@ -118,52 +115,52 @@ footer {
 
 /* List Styling */
 ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    color: var(--dark);
+  list-style-type: disc;
+  margin-left: 20px;
+  color: var(--dark);
 }
 
 /* Orange bullet points */
 ul li::marker {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 /* Flex container for font variants */
 .font-variant {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 /* Styling for the variant title */
 .font-variant h2 {
-    font-weight: normal;
-    margin: 0;
-    width: 30%;
-    text-align: left;
-    font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+  width: 30%;
+  text-align: left;
+  font-size: 1.5rem;
 }
 
 /* Styling for the paragraph example */
 .font-variant p {
-    width: 65%;
-    margin: 0;
+  width: 65%;
+  margin: 0;
 }
 
 /* Font Weight Styles */
 .light {
-    font-weight: 200; /* Light */
+  font-weight: 200; /* Light */
 }
 
 .regular {
-    font-weight: 400; /* Regular */
+  font-weight: 400; /* Regular */
 }
 
 .semibold {
-    font-weight: 600; /* Semi-bold */
+  font-weight: 600; /* Semi-bold */
 }
 
 .bold {
-    font-weight: 700; /* Bold */
+  font-weight: 700; /* Bold */
 }

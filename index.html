@@ -11,6 +11,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,16 +23,20 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/colours.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <!-- Custom Scripts -->
     <script src="./scripts/script.js"></script>
   </head>
   <body class="h-100 d-flex flex-column">
+    <!-- Header -->
     <header class="d-flex bg-primary-subtle">
       <div class="d-flex w-75 m-auto align-items-center">
+        <!-- Logo -->
         <div class="d-flex p-3 m-auto w-100">
           <a
             class="d-flex gap-3 align-items-center logo-link"
@@ -46,6 +51,7 @@
             DailyTube Pattern Library
           </a>
         </div>
+        <!-- Navigation -->
         <nav class="w-100">
           <ul class="nav justify-content-center">
             <li class="nav-item">
@@ -79,15 +85,17 @@
         </nav>
       </div>
     </header>
+    <!-- Main -->
     <main
       class="d-flex w-75 m-auto justify-content-center flex-column flex-grow-1"
     >
+      <!-- Content Area for Dynamic Content Loading -->
       <div id="content-area" class="h-100 w-100 px-4"></div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="text-center p-3 border-top border-1 mt-3">
-      <span class="p-2">&copy; 2024 DailyTube. All rights reserved.</span>
-    </footer>
+      <!-- Footer -->
+      <footer class="container-fluid text-center border-top border-1 py-4 mt-3">
+        <span class="p-2">&copy; 2024 DailyTube. All rights reserved.</span>
+      </footer>
+    </main>
   </body>
 </html>

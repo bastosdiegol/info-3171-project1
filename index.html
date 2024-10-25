@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en" class="h-100 d-flex flex-column">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,11 +29,15 @@
     <link rel="stylesheet" href="./styles/footer.css" />
     <script src="./scripts/script.js"></script>
   </head>
-  <body class="d-flex flex-column bg-info-subtle h-100 min-vw-100">
+  <body class="h-100 d-flex flex-column">
     <header class="d-flex bg-primary-subtle">
       <div class="d-flex w-75 m-auto align-items-center">
         <div class="d-flex p-3 m-auto w-100">
-          <a class="d-flex gap-3 align-items-center" href="#">
+          <a
+            class="d-flex gap-3 align-items-center logo-link"
+            href="#"
+            data-content="./content/identity.html"
+          >
             <img
               src="./images/logo-min.png"
               class="header-logo"
@@ -76,15 +80,14 @@
       </div>
     </header>
     <main
-      class="d-flex h-100 w-75 m-auto justify-content-center flex-column flex-grow-1"
+      class="d-flex w-75 m-auto justify-content-center flex-column flex-grow-1"
     >
       <div id="content-area" class="h-100 w-100 px-4"></div>
     </main>
 
-    <div class="clear"></div>
     <!-- Footer -->
     <footer class="text-center p-3 border-top border-1 mt-3">
-      &copy; 2024 DailyTube. All rights reserved.
+      <span class="p-2">&copy; 2024 DailyTube. All rights reserved.</span>
     </footer>
   </body>
 </html>

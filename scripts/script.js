@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to bind event listeners to dynamic links
   function bindDynamicContentEvents() {
-    const links = document.querySelectorAll(".nav-link, .load-content");
+    const links = document.querySelectorAll(
+      ".logo-link, .nav-link, .load-content"
+    );
 
     // Remove any previous listeners by cloning nodes (this clears old listeners)
     links.forEach((link) => {
@@ -28,15 +30,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Now bind new listeners without stacking
-    document.querySelectorAll(".nav-link, .load-content").forEach((link) => {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
-        const contentUrl = this.getAttribute("data-content");
-        if (contentUrl) {
-          loadContent(contentUrl);
-        }
+    document
+      .querySelectorAll(".logo-link, .nav-link, .load-content")
+      .forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          const contentUrl = this.getAttribute("data-content");
+          if (contentUrl) {
+            loadContent(contentUrl);
+          }
+        });
       });
-    });
   }
 
   // Initial load of identity.html by default

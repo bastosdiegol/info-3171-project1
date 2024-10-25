@@ -162,7 +162,7 @@ ul li::marker {
   font-weight: 700; /* Bold */
 }
 
-/* Colour Card */
+/* Colour Cards */
 .color-card {
   width: 18rem;
   border: 1px solid var(--secondary);

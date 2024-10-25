@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.text())
       .then((data) => {
         contentArea.innerHTML = data;
+        // Initialize tooltips after content is loaded
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         // Re-apply event listeners after content is loaded
         bindDynamicContentEvents();
       })

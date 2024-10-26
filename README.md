@@ -11,7 +11,7 @@
     - Mikhail Kulebiakin
     - Olivia Ruas Guimaraes
 
-## Description:
+## Description
 
 This project involves two components:
 
@@ -21,11 +21,13 @@ This project involves two components:
 ### About the client:
 
 - Company: DailyTube
-            - Branding: Invite everyone, creativity and positivity
+- Branding: Invite everyone, creativity and positivity
 - Business Goal: Giving everyone a voice and exposing them to the outside world
 - Target Audience: DailyTube Management
 
-## Visual Requirements:
+## Requirements
+
+### Visual
 
 - Dashboard colors should be monochromatic with bright website color schemes
 - Simple and unambiguous design
@@ -37,7 +39,7 @@ This project involves two components:
 - Use of icons in appropriate places
 - Add logo to pattern library and dashboard
 
-## Chart Requirements:
+### Charts
 
 - The proportion of the top 100 YouTube channels in each category
 - Relationship between 'likes' and 'subscribers'
@@ -49,7 +51,7 @@ This project involves two components:
 - The country that has the most YouTubers in the top 100 list
 - The name of the channel with the most subscribers
 
-## General Chart Requirements:
+#### General Charts
 
 - Include at least 6 multi-value charts and 3 single-value charts
 - Use at least 4 different types of multi-value charts
@@ -63,14 +65,14 @@ This project involves two components:
 - Ticks and tick labels for axes on all charts
 - Include chart name and axes labels for every chart
 
-## Data Requirements:
+### Data
 
 - Render data from the provided document
 - Use XAMPP to render data files
 - Do not change original data
 - Restructure data format using JavaScript if needed
 
-## Technology Requirements:
+### Technology
 
 - Use HTML, CSS, and JavaScript
 - Must use D3.js for charts
@@ -78,7 +80,7 @@ This project involves two components:
 - Bootstrap or other CSS frameworks allowed
 - Run XAMPP to render data files
 
-## Project1 (UI Pattern Library) Requirements:
+### Project 1 (UI Pattern Library)
 
 - Create patterns for Color, Page Layouts, Typography, Data Visualization, and at least 6 UI Components
 - Add a menu to navigate between different elements' patterns
@@ -86,7 +88,7 @@ This project involves two components:
 - List all UI components to be used for the dashboard
 - Include various chart types in the Data Visualization section
 
-## Project2 (Dashboard) Requirements:
+### Project 2 (Dashboard)
 
 - Create data charts to display given data
 - Create a webpage with the best UI to show the data charts

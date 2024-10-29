@@ -1,71 +1,211 @@
 <h1 class="text-center my-4">Components</h1>
 <section id="components" class="container">
-    <!-- Menus -->
-    <h2>Menus</h2>
-    <p>Design a pattern for navigation, including styles for active menu items and hover states.</p>
-    <nav class="nav nav-pills mb-4">
-        <a class="nav-link active" href="#">Active</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled" href="#">Disabled</a>
-    </nav>
+  <!-- Menus -->
+  <h2>Menus</h2>
+  <p>
+    Menus help organize navigation within a dashboard, guiding users to specific sections.
+    Style active menu items to show the current page, and include hover effects for better user experience.
+    Example usage: navigating between "Dashboard", "Reports", and "Settings" sections.
+  </p>
+  <nav class="nav nav-pills mb-4">
+    <a class="nav-link active" href="#">Dashboard</a>
+    <a class="nav-link" href="#">Reports</a>
+    <a class="nav-link" href="#">Settings</a>
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </nav>
 
-    <!-- Buttons -->
-    <h2>Buttons</h2>
-    <p>Define button styles for dropdowns, checkboxes, radio buttons, etc. Include size, colour, hover effects, and font
-        choices.</p>
-    <div class="mb-3">
-        <button class="btn btn-primary">Primary Button</button>
-        <button class="btn btn-secondary">Secondary Button</button>
-        <button class="btn btn-success">Success Button</button>
-    </div>
-    <div class="mb-3">
-        <label class="form-check-label me-2">Checkbox:
-            <input type="checkbox" class="form-check-input">
-        </label>
-    </div>
-    <div class="mb-3">
-        <label class="form-check-label me-2">Radio:</label>
-        <label>
-            <input type="radio" class="form-check-input">
-        </label>
-    </div>
+  <!-- Buttons -->
+  <h2>Buttons</h2>
+  <p>
+    Buttons are interactive elements that trigger actions. In dashboards, they are often used for submitting data,
+    navigating, or initiating tasks like "Download Report" or "Generate Chart". Customize each button style for primary
+    actions, secondary actions, and success indicators. Add hover effects and focus styles to enhance accessibility.
+  </p>
+  <div class="mb-3">
+    <button class="btn btn-primary">Primary Action</button>
+    <button class="btn btn-secondary">Secondary Action</button>
+    <button class="btn btn-success">Save Changes</button>
+  </div>
 
-    <!-- Textboxes -->
-    <h2>Textboxes</h2>
-    <p>Provide designs for textboxes used to enter data in forms.</p>
-    <div class="mb-4">
+  <!-- Expanded Checkbox Examples -->
+  <h3>Checkboxes</h3>
+  <p>
+    Checkboxes allow users to select multiple options at once, useful in dashboards for filtering data or customizing
+    visible metrics. Below are examples of how checkboxes can be used to filter data types and select metrics in a
+    dashboard interface.
+  </p>
+  <div class="mb-3">
+    <label class="form-check-label me-2">Show Data Types:</label>
+    <label>
+      <input type="checkbox" class="form-check-input"> Sales
+    </label>
+    <label>
+      <input type="checkbox" class="form-check-input"> Revenue
+    </label>
+    <label>
+      <input type="checkbox" class="form-check-input"> Expenses
+    </label>
+  </div>
+  <p>
+    <strong>Example:</strong> In a financial dashboard, checkboxes let users control which data types they want to
+    view, such as "Sales," "Revenue," or "Expenses." Selecting multiple options allows a customizable data view
+    where users see only the metrics they need.
+  </p>
+
+  <!-- Expanded Radio Button Examples -->
+  <h3>Radio Buttons</h3>
+  <p>
+    Radio buttons are used when only one option is allowed at a time. In dashboards, they can be used to toggle
+    between different views or reporting options. For example, users might select between daily, weekly, and monthly
+    views of a metric.
+  </p>
+  <div class="mb-3">
+    <label class="form-check-label me-2">Time Range:</label>
+    <label>
+      <input type="radio" class="form-check-input" name="timeRange" value="daily"> Daily
+    </label>
+    <label>
+      <input type="radio" class="form-check-input" name="timeRange" value="weekly"> Weekly
+    </label>
+    <label>
+      <input type="radio" class="form-check-input" name="timeRange" value="monthly"> Monthly
+    </label>
+  </div>
+  <p>
+    <strong>Example:</strong> In a data analytics dashboard, radio buttons allow the user to select a single time
+    range for data visualization, such as "Daily," "Weekly," or "Monthly" views. This ensures that only one range is
+    active, providing clarity and preventing data overlap in the displayed charts.
+  </p>
+
+  <!-- Additional Example with Both Checkboxes and Radio Buttons Combined -->
+  <div class="mb-3">
+    <h4>Select Display Options</h4>
+    <label class="form-check-label me-2">Display:</label>
+    <div>
       <label>
-        <input type="text" class="form-control" placeholder="Enter text here">
+        <input type="checkbox" class="form-check-input"> Show Tooltips
+      </label>
+      <label>
+        <input type="checkbox" class="form-check-input"> Enable Animations
+      </label>
+      <label>
+        <input type="checkbox" class="form-check-input"> Display Gridlines
       </label>
     </div>
+    <p>Choose Chart Type:</p>
+    <label>
+      <input type="radio" class="form-check-input" name="chartType" value="line"> Line Chart
+    </label>
+    <label>
+      <input type="radio" class="form-check-input" name="chartType" value="bar"> Bar Chart
+    </label>
+    <label>
+      <input type="radio" class="form-check-input" name="chartType" value="pie"> Pie Chart
+    </label>
+  </div>
+  <p>
+    <strong>Example:</strong> This combination allows users to customize chart display options by selecting features
+    like tooltips, animations, and gridlines, while also choosing a specific chart type. This setup provides flexibility
+    in data presentation, catering to varied preferences for dashboard visualization.
+  </p>
 
-    <!-- Dropdowns -->
-    <h2>Dropdowns</h2>
-    <p>Provide designs for inputs used to change data in the charts.</p>
-    <div class="dropdown mb-4">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown Menu
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Option 1</a></li>
-            <li><a class="dropdown-item" href="#">Option 2</a></li>
-            <li><a class="dropdown-item" href="#">Option 3</a></li>
-        </ul>
-    </div>
+  <!-- Textboxes -->
+  <h2>Textboxes</h2>
+  <p>
+    Textboxes are used for user input, such as filtering data or searching for specific metrics. Ensure the placeholder
+    text is informative to guide users. Customize textboxes for better visibility in data-driven dashboards.
+    Example usage: entering keywords to filter through extensive datasets.
+  </p>
+  <div class="mb-4">
+    <label>
+      <input type="text" class="form-control" placeholder="Search data...">
+    </label>
+  </div>
 
-    <!-- Tooltips -->
-    <h2>Tooltips</h2>
-    <p>Create a pattern for how tooltips appear on charts, including font size, colour, and the type of data
-        displayed.</p>
-    <button
-      type="button"
-      class="btn btn-info"
-      data-bs-toggle="tooltip"
-      data-bs-custom-class="custom-tooltip"
-      data-bs-placement="top"
-      title="Tooltip example">
-      Hover for Tooltip
+  <!-- Dropdowns -->
+  <h2>Dropdowns</h2>
+  <p>
+    Dropdowns allow users to select from multiple options without cluttering the interface. In a dashboard, they can be
+    used to filter data views, such as selecting time periods or data categories. Customize the dropdown to be clearly
+    identifiable and ensure options are relevant to the context.
+  </p>
+  <div class="dropdown mb-4">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Select Data Range
     </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Last 7 Days</a></li>
+      <li><a class="dropdown-item" href="#">Last 30 Days</a></li>
+      <li><a class="dropdown-item" href="#">Year to Date</a></li>
+    </ul>
+  </div>
 
+  <!-- Tooltips -->
+  <h2>Tooltips</h2>
+  <p>
+    Tooltips provide additional information without taking up space. In dashboards, they are often used on data points
+    in charts to show precise values or details on hover. Customize tooltips to be contextually relevant, with clear
+    formatting and appropriate positioning.
+  </p>
+  <div class="mb-4">
+    <button
+            type="button"
+            class="btn btn-info"
+            data-bs-toggle="tooltip"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-placement="top"
+            title="More info about this data point">
+      Data Point Info
+    </button>
+  </div>
+
+  <!-- Accordions -->
+  <h2>Accordions</h2>
+  <p>
+    Accordions allow users to expand and collapse sections, perfect for organizing dense information like settings,
+    report options, or data insights. Customize to support both expand and collapse states and ensure smooth animations
+    for better usability. Each section should be clearly labeled to help users find specific information quickly.
+  </p>
+  <div class="accordion mb-4" id="infoAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+          Report Filters
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#infoAccordion">
+        <div class="accordion-body">
+          Customize report filters, such as date ranges, metrics, and categories. Perfect for creating tailored
+          insights.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+          Display Options
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+        <div class="accordion-body">
+          Control display settings, such as light/dark modes, chart types, and layout configurations.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Advanced Settings
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+        <div class="accordion-body">
+          Configure advanced settings, such as API connections, data refresh intervals, and custom calculations.
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

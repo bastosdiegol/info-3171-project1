@@ -13,6 +13,16 @@
     <a class="nav-link" href="#">Settings</a>
     <a class="nav-link disabled" href="#">Disabled</a>
   </nav>
+  <pre>
+    <code class="language-markup">
+&#x3C;nav class=&#x22;nav nav-pills mb-4&#x22;&#x3E;
+  &#x3C;a class=&#x22;nav-link active&#x22; href=&#x22;#&#x22;&#x3E;Dashboard&#x3C;/a&#x3E;
+  &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Reports&#x3C;/a&#x3E;
+  &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Settings&#x3C;/a&#x3E;
+  &#x3C;a class=&#x22;nav-link disabled&#x22; href=&#x22;#&#x22;&#x3E;Disabled&#x3C;/a&#x3E;
+&#x3C;/nav&#x3E;
+    </code>
+  </pre>
 
   <!-- Buttons -->
   <h2>Buttons</h2>
@@ -26,6 +36,15 @@
     <button class="btn btn-secondary">Secondary Action</button>
     <button class="btn btn-success">Save Changes</button>
   </div>
+  <pre>
+    <code class="language-markup">
+&#x3C;div class=&#x22;mb-3&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-primary&#x22;&#x3E;Primary Action&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary&#x22;&#x3E;Secondary Action&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn btn-success&#x22;&#x3E;Save Changes&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+    </code>
+  </pre>
 
   <!-- Expanded Checkbox Examples -->
   <h3>Checkboxes</h3>
@@ -51,6 +70,23 @@
     view, such as "Sales," "Revenue," or "Expenses." Selecting multiple options allows a customizable data view
     where users see only the metrics they need.
   </p>
+  <pre>
+    <code class="language-markup">
+&#x3C;div class=&#x22;mb-3&#x22;&#x3E;
+  &#x3C;label class=&#x22;form-check-label me-2&#x22;&#x3E;Show Data Types:&#x3C;/label&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; class=&#x22;form-check-input&#x22;&#x3E; Sales
+  &#x3C;/label&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; class=&#x22;form-check-input&#x22;&#x3E; Revenue
+  &#x3C;/label&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; class=&#x22;form-check-input&#x22;&#x3E; Expenses
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+    </code>
+  </pre>
+
 
   <!-- Expanded Radio Button Examples -->
   <h3>Radio Buttons</h3>
@@ -76,6 +112,22 @@
     range for data visualization, such as "Daily," "Weekly," or "Monthly" views. This ensures that only one range is
     active, providing clarity and preventing data overlap in the displayed charts.
   </p>
+  <pre>
+    <code class="language-markup">
+&#x3C;div class=&#x22;mb-3&#x22;&#x3E;
+  &#x3C;label class=&#x22;form-check-label me-2&#x22;&#x3E;Time Range:&#x3C;/label&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; class=&#x22;form-check-input&#x22; name=&#x22;timeRange&#x22; value=&#x22;daily&#x22;&#x3E; Daily
+  &#x3C;/label&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; class=&#x22;form-check-input&#x22; name=&#x22;timeRange&#x22; value=&#x22;weekly&#x22;&#x3E; Weekly
+  &#x3C;/label&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; class=&#x22;form-check-input&#x22; name=&#x22;timeRange&#x22; value=&#x22;monthly&#x22;&#x3E; Monthly
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+    </code>
+  </pre>
 
   <!-- Additional Example with Both Checkboxes and Radio Buttons Combined -->
   <div class="mb-3">
@@ -108,6 +160,35 @@
     like tooltips, animations, and gridlines, while also choosing a specific chart type. This setup provides flexibility
     in data presentation, catering to varied preferences for dashboard visualization.
   </p>
+  <pre>
+    <code class="language-markup">
+&#x3C;div class=&#x22;mb-3&#x22;&#x3E;
+  &#x3C;h4&#x3E;Select Display Options&#x3C;/h4&#x3E;
+  &#x3C;label class=&#x22;form-check-label me-2&#x22;&#x3E;Display:&#x3C;/label&#x3E;
+  &#x3C;div&#x3E;
+    &#x3C;label&#x3E;
+      &#x3C;input type=&#x22;checkbox&#x22; class=&#x22;form-check-input&#x22;&#x3E; Show Tooltips
+    &#x3C;/label&#x3E;
+    &#x3C;label&#x3E;
+      &#x3C;input type=&#x22;checkbox&#x22; class=&#x22;form-check-input&#x22;&#x3E; Enable Animations
+    &#x3C;/label&#x3E;
+    &#x3C;label&#x3E;
+      &#x3C;input type=&#x22;checkbox&#x22; class=&#x22;form-check-input&#x22;&#x3E; Display Gridlines
+    &#x3C;/label&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;p&#x3E;Choose Chart Type:&#x3C;/p&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; class=&#x22;form-check-input&#x22; name=&#x22;chartType&#x22; value=&#x22;line&#x22;&#x3E; Line Chart
+  &#x3C;/label&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; class=&#x22;form-check-input&#x22; name=&#x22;chartType&#x22; value=&#x22;bar&#x22;&#x3E; Bar Chart
+  &#x3C;/label&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; class=&#x22;form-check-input&#x22; name=&#x22;chartType&#x22; value=&#x22;pie&#x22;&#x3E; Pie Chart
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+    </code>
+  </pre>
 
   <!-- Textboxes -->
   <h2>Textboxes</h2>
@@ -121,6 +202,15 @@
       <input type="text" class="form-control" placeholder="Search data...">
     </label>
   </div>
+  <pre>
+    <code class="language-markup">
+&#x3C;div class=&#x22;mb-4&#x22;&#x3E;
+  &#x3C;label&#x3E;
+    &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; placeholder=&#x22;Search data...&#x22;&#x3E;
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+    </code>
+  </pre>
 
   <!-- Dropdowns -->
   <h2>Dropdowns</h2>
@@ -139,6 +229,20 @@
       <li><a class="dropdown-item" href="#">Year to Date</a></li>
     </ul>
   </div>
+  <pre>
+    <code class="language-markup">
+&#x3C;div class=&#x22;dropdown mb-4&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-bs-toggle=&#x22;dropdown&#x22; aria-expanded=&#x22;false&#x22;&#x3E;
+    Select Data Range
+  &#x3C;/button&#x3E;
+  &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+    &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Last 7 Days&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Last 30 Days&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Year to Date&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/div&#x3E;
+    </code>
+  </pre>
 
   <!-- Tooltips -->
   <h2>Tooltips</h2>
@@ -158,6 +262,21 @@
       Data Point Info
     </button>
   </div>
+  <pre>
+    <code class="language-markup">
+&#x3C;div class=&#x22;mb-4&#x22;&#x3E;
+  &#x3C;button
+          type=&#x22;button&#x22;
+          class=&#x22;btn btn-info&#x22;
+          data-bs-toggle=&#x22;tooltip&#x22;
+          data-bs-custom-class=&#x22;custom-tooltip&#x22;
+          data-bs-placement=&#x22;top&#x22;
+          title=&#x22;More info about this data point&#x22;&#x3E;
+    Data Point Info
+  &#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+    </code>
+  </pre>
 
   <!-- Accordions -->
   <h2>Accordions</h2>
@@ -208,4 +327,51 @@
       </div>
     </div>
   </div>
+  <pre>
+    <code class="language-markup">
+&#x3C;div class=&#x22;accordion mb-4&#x22; id=&#x22;infoAccordion&#x22;&#x3E;
+  &#x3C;div class=&#x22;accordion-item&#x22;&#x3E;
+    &#x3C;h2 class=&#x22;accordion-header&#x22;&#x3E;
+      &#x3C;button class=&#x22;accordion-button&#x22; type=&#x22;button&#x22; data-bs-toggle=&#x22;collapse&#x22; data-bs-target=&#x22;#collapseOne&#x22;
+              aria-expanded=&#x22;true&#x22; aria-controls=&#x22;collapseOne&#x22;&#x3E;
+        Report Filters
+      &#x3C;/button&#x3E;
+    &#x3C;/h2&#x3E;
+    &#x3C;div id=&#x22;collapseOne&#x22; class=&#x22;accordion-collapse collapse show&#x22; data-bs-parent=&#x22;#infoAccordion&#x22;&#x3E;
+      &#x3C;div class=&#x22;accordion-body&#x22;&#x3E;
+        Customize report filters, such as date ranges, metrics, and categories. Perfect for creating tailored
+        insights.
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;accordion-item&#x22;&#x3E;
+    &#x3C;h2 class=&#x22;accordion-header&#x22;&#x3E;
+      &#x3C;button class=&#x22;accordion-button collapsed&#x22; type=&#x22;button&#x22; data-bs-toggle=&#x22;collapse&#x22; data-bs-target=&#x22;#collapseTwo&#x22;
+              aria-expanded=&#x22;false&#x22; aria-controls=&#x22;collapseTwo&#x22;&#x3E;
+        Display Options
+      &#x3C;/button&#x3E;
+    &#x3C;/h2&#x3E;
+    &#x3C;div id=&#x22;collapseTwo&#x22; class=&#x22;accordion-collapse collapse&#x22; data-bs-parent=&#x22;#infoAccordion&#x22;&#x3E;
+      &#x3C;div class=&#x22;accordion-body&#x22;&#x3E;
+        Control display settings, such as light/dark modes, chart types, and layout configurations.
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;accordion-item&#x22;&#x3E;
+    &#x3C;h2 class=&#x22;accordion-header&#x22;&#x3E;
+      &#x3C;button class=&#x22;accordion-button collapsed&#x22; type=&#x22;button&#x22; data-bs-toggle=&#x22;collapse&#x22;
+              data-bs-target=&#x22;#collapseThree&#x22; aria-expanded=&#x22;false&#x22; aria-controls=&#x22;collapseThree&#x22;&#x3E;
+        Advanced Settings
+      &#x3C;/button&#x3E;
+    &#x3C;/h2&#x3E;
+    &#x3C;div id=&#x22;collapseThree&#x22; class=&#x22;accordion-collapse collapse&#x22; data-bs-parent=&#x22;#infoAccordion&#x22;&#x3E;
+      &#x3C;div class=&#x22;accordion-body&#x22;&#x3E;
+        Configure advanced settings, such as API connections, data refresh intervals, and custom calculations.
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+    </code>
+  </pre>
+
 </section>

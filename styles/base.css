@@ -6,6 +6,10 @@
   --light: #f7f7f2ff;
 }
 
+pre {
+  margin-bottom: 2em;
+}
+
 *,
 *::after,
 *::before {

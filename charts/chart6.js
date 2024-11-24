@@ -10,22 +10,25 @@ var selectedCountryName;
  */
 function getChart6() {
   // Chart Variables and Constants
-  const width = 540;
-  const height = 320;
-  const margin = { top: 50, right: 40, bottom: 50, left: 60 };
-  const innerWidth = width - margin.left - margin.right;
-  const innerHeight = height - margin.top - margin.bottom;
+  const defaultWidth = 540;
+  const defaultHeight = 320;
+  let margin = { top: 50, right: 40, bottom: 50, left: 60 };
+
+  // Responsive SVG dimensions
+  const width = Math.min(defaultWidth, window.innerWidth * 0.9);
+  const height = Math.min(defaultHeight, window.innerHeight * 0.7);
 
   // Chart Settings
   const svg = d3
     .select("#chart-6")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", "100%")
+    .attr("height", "auto")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("preserveAspectRatio", "xMidYMid meet");
 
   // Reading CSV
   d3.csv("../data/top_100_youtubers.csv").then((data) => {
-    // Create Input For Countries without duplicates
     const countries = [...new Set(data.map((d) => d.Country))];
 
     // Append Select Label
@@ -64,15 +67,14 @@ function getChart6() {
     // Draw initial chart
     update();
 
-    // Update Function
+    // Inner Function for Chart Update on Select Change
     function update() {
-      // Update selectedCountry
+      // Get selected country name
       selectedCountry = d3.select("#country-select").property("value");
       selectedCountryName = getCountryName(selectedCountry);
 
-      // Filter data
+      // Filter data by selected country
       const filteredData = data.filter((d) => d.Country === selectedCountry);
-
       // Count channels by category
       const categoryCounts = Array.from(
         d3.rollup(
@@ -83,10 +85,18 @@ function getChart6() {
         ([category, count]) => ({ category, count })
       );
 
-      // Clear current chart
-      svg.selectAll(".bar").remove();
-      svg.selectAll(".axis").remove();
-      svg.selectAll(".chart-title").remove();
+      // Clear previous chart
+      svg.selectAll(".bar, .axis, .chart-title").remove();
+
+      // Measure label sizes for dynamic margins
+      const xLabels = categoryCounts.map((d) => d.category);
+      const maxLabelLength = Math.max(...xLabels.map((label) => label.length));
+
+      margin.bottom = Math.max(50, maxLabelLength * 5);
+      margin.left = Math.max(60, 40);
+
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
 
       // Update chart title
       svg
@@ -103,38 +113,37 @@ function getChart6() {
       const xScale = d3
         .scaleBand()
         .domain(categoryCounts.map((d) => d.category))
-        .range([margin.left, innerWidth])
+        .range([margin.left, margin.left + innerWidth])
         .padding(0.1);
+
       const yScale = d3
         .scaleLinear()
         .domain([0, d3.max(categoryCounts, (d) => d.count)])
-        .range([innerHeight, margin.top]);
+        .range([margin.top + innerHeight, margin.top]);
 
       // Axes
       const xAxis = d3.axisBottom(xScale);
       const yAxis = d3
         .axisLeft(yScale)
-        .ticks(d3.max(categoryCounts, (d) => d.count))
+        .ticks(6)
         .tickFormat((d) => (Number.isInteger(d) ? d : ""));
 
-      // Append x-axis
       svg
         .append("g")
         .attr("class", "axis")
-        .attr("transform", `translate(0, ${innerHeight})`)
+        .attr("transform", `translate(0, ${margin.top + innerHeight})`)
         .call(xAxis)
         .selectAll("text")
         .attr("transform", "rotate(-45)")
         .style("text-anchor", "end");
 
-      // Append y-axis
       svg
         .append("g")
         .attr("class", "axis")
         .attr("transform", `translate(${margin.left}, 0)`)
         .call(yAxis);
 
-      // Define Gradient for Bars
+      // Gradient Colours for Bars
       const gradient = svg
         .append("defs")
         .append("linearGradient")
@@ -143,6 +152,7 @@ function getChart6() {
         .attr("x2", "100%")
         .attr("y1", "0%")
         .attr("y2", "100%");
+
       gradient
         .append("stop")
         .attr("offset", "0%")
@@ -162,7 +172,7 @@ function getChart6() {
         .attr("x", (d) => xScale(d.category))
         .attr("y", (d) => yScale(d.count))
         .attr("width", xScale.bandwidth())
-        .attr("height", (d) => innerHeight - yScale(d.count))
+        .attr("height", (d) => margin.top + innerHeight - yScale(d.count)) // Adjusted to start from the X-axis
         .attr("fill", "url(#bar-gradient)");
     }
   });

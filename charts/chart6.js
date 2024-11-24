@@ -2,14 +2,6 @@
 var selectedCountry = "IN";
 var selectedCountryName;
 
-// Access CSS variables
-const rootStyles = getComputedStyle(document.documentElement);
-const primaryColor = rootStyles.getPropertyValue("--primary").trim();
-const secondaryColor = rootStyles.getPropertyValue("--secondary").trim();
-const infoColor = rootStyles.getPropertyValue("--info").trim();
-const darkColor = rootStyles.getPropertyValue("--dark").trim();
-const lightColor = rootStyles.getPropertyValue("--light").trim();
-
 /**
  * @function getChart6
  * @description The number of YouTube channels by category
@@ -20,24 +12,16 @@ function getChart6() {
   // Chart Variables and Constants
   const width = 540;
   const height = 320;
-  const margin = { top: 40, right: 40, bottom: 40, left: 40 };
+  const margin = { top: 50, right: 40, bottom: 50, left: 60 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
-  const padding = 10;
-  const legendOffset = 10;
-  const chartTitle = `YouTube Channels in ${selectedCountryName} by Category`;
-  const xOffset = margin.left + (width - innerWidth) / 2;
-  const yOffset = margin.top + (height - innerHeight) / 2;
 
   // Chart Settings
   const svg = d3
     .select("#chart-6")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .style("background-color", lightColor)
-    .style("border", `1px solid ${darkColor}`)
-    .style("border-radius", "5px");
+    .attr("height", height);
 
   // Reading CSV
   d3.csv("../data/top_100_youtubers.csv").then((data) => {
@@ -47,7 +31,7 @@ function getChart6() {
     // Append Select Label
     svg
       .append("foreignObject")
-      .attr("x", padding)
+      .attr("x", 10)
       .attr("y", 1)
       .attr("width", 120)
       .attr("height", 30)
@@ -59,8 +43,8 @@ function getChart6() {
     // Append Select
     svg
       .append("foreignObject")
-      .attr("x", padding + 55)
-      .attr("y", 1)
+      .attr("x", 65)
+      .attr("y", 2)
       .attr("width", 120)
       .attr("height", 30)
       .append("xhtml:div")
@@ -109,10 +93,10 @@ function getChart6() {
         .append("text")
         .attr("class", "chart-title")
         .attr("x", width / 2)
-        .attr("y", padding * 2)
+        .attr("y", 20)
         .attr("text-anchor", "middle")
         .style("font-weight", "bold")
-        .style("fill", primaryColor)
+        .style("fill", PRIMARY_COLOUR)
         .text(`YouTube Channels in ${selectedCountryName} by Category`);
 
       // Scales
@@ -162,11 +146,11 @@ function getChart6() {
       gradient
         .append("stop")
         .attr("offset", "0%")
-        .attr("stop-color", primaryColor);
+        .attr("stop-color", PRIMARY_COLOUR);
       gradient
         .append("stop")
         .attr("offset", "100%")
-        .attr("stop-color", secondaryColor);
+        .attr("stop-color", SECONDARY_COLOUR);
 
       // Bars
       svg

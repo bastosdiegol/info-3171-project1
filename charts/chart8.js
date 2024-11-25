@@ -53,6 +53,7 @@ function getChart8() {
         .attr("y", -20)
         .attr("text-anchor", "middle")
         .style("font-size", "24px")
+        .style("fill", SECONDARY_COLOUR)
         .text(getFullCountryName(topCountry[0]));
 
     // Display count

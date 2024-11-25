@@ -13,6 +13,19 @@ function getChart3() {
     const chartHeight = height - margin.top - margin.bottom;
     const chartTitle = "Total YouTube Channels by Country";
 
+    // Create tooltip div
+    const tooltip = d3.select("body")
+        .append("div")
+        .attr("class", "d3-tooltip")
+        .style("position", "absolute")
+        .style("visibility", "hidden")
+        .style("background-color", "white")
+        .style("border", "1px solid #ddd")
+        .style("border-radius", "4px")
+        .style("padding", "8px")
+        .style("font-size", "12px")
+        .style("box-shadow", "0 2px 4px rgba(0,0,0,0.1)");
+
     // Create SVG container
     const svg = d3
         .select("#chart-3")
@@ -67,16 +80,33 @@ function getChart3() {
         const yAxis = d3.axisLeft(yScale);
 
         // Add X axis
-        chart
+        const xAxisGroup = chart
             .append("g")
             .attr("class", "x-axis")
             .attr("transform", `translate(0, ${chartHeight})`)
-            .call(xAxis)
-            .selectAll("text")
+            .call(xAxis);
+
+        xAxisGroup.selectAll("text")
             .style("text-anchor", "end")
             .attr("dx", "-.8em")
             .attr("dy", ".15em")
-            .attr("transform", "rotate(-45)");
+            .attr("transform", "rotate(-45)")
+            .style("cursor", "pointer")
+            .on("mouseover", function (event, d) {
+                tooltip
+                    .style("visibility", "visible")
+                    .text(getFullCountryName(d))
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 10) + "px");
+            })
+            .on("mousemove", function (event) {
+                tooltip
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 10) + "px");
+            })
+            .on("mouseout", function () {
+                tooltip.style("visibility", "hidden");
+            });
 
         // Add Y axis
         chart
@@ -125,4 +155,25 @@ function getChart3() {
             .style("font-size", "12px")
             .text(d => d.count);
     });
+}
+
+// Helper function to get full country names
+function getFullCountryName(countryCode) {
+    const countryNames = {
+        'BR': 'Brazil',
+        'BY': 'Belarus',
+        'CA': 'Canada',
+        'CL': 'Chile',
+        'IN': 'India',
+        'KR': 'South Korea',
+        'MX': 'Mexico',
+        'NO': 'Norway',
+        'PH': 'Philippines',
+        'PR': 'Puerto Rico',
+        'SV': 'El Salvador',
+        'TH': 'Thailand',
+        'UK': 'United Kingdom',
+        'US': 'United States',
+    };
+    return countryNames[countryCode] || countryCode;
 }

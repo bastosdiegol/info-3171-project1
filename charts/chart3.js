@@ -97,7 +97,7 @@ function getChart3() {
         const colorScale = d3
             .scaleSequential()
             .domain([0, d3.max(countryData, d => d.count)])
-            .interpolator(d3.interpolateRgbBasis(["#e4e6c3", "#dcd21a", "#ffbd59"]));
+            .interpolator(d3.interpolateRgbBasis([INFO_COLOUR, SECONDARY_COLOUR, PRIMARY_COLOUR]));
 
         // Add bars
         chart

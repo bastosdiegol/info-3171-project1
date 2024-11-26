@@ -8,7 +8,6 @@ function getChart1() {
   const height = 320;
   const radius = Math.min(width, height) / 2 - 50;
   const colors = ["#ffbd59", "#dcd21a", "#e4e6c3"];
-  const chartTitle = "The Proportion of Top 100 YouTube Channels by Category";
 
   // Chart Settings: Create a responsive SVG inside #chart-1
   const svg = d3
@@ -27,12 +26,13 @@ function getChart1() {
   // Chart Title
   svg
     .append("text")
+    .attr("class", "chart-title")
     .attr("x", width / 2)
     .attr("y", 20)
     .attr("text-anchor", "middle")
-    .attr("font-size", "16px")
-    .attr("font-weight", "bold")
-    .text(chartTitle);
+    .style("font-weight", "bold")
+    .style("fill", PRIMARY_COLOUR)
+    .text(`The Proportion of Top 100 YouTube Channels by Category`);
 
   // Function to Draw Chart
   function drawChart(data) {

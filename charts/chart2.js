@@ -15,8 +15,10 @@ function getChart2() {
   const svg = d3
     .select("#chart-2")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", "100%")
+    .attr("height", "auto")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("preserveAspectRatio", "xMidYMid meet")
 
   // Chart Title
   svg
@@ -26,7 +28,7 @@ function getChart2() {
     .attr("text-anchor", "middle")
     .attr("font-size", "16px")
     .attr("font-weight", "bold")
-    .attr("fill","#FFBD59")
+    .attr("fill", "#FFBD59")
     .text(chartTitle);
 
   // Group for Chart Area

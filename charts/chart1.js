@@ -40,10 +40,7 @@ function getChart1() {
     const pie = d3.pie().value((d) => d.count);
 
     // Pie Settings
-    const arc = d3
-      .arc()
-      .innerRadius(0)
-      .outerRadius(radius);
+    const arc = d3.arc().innerRadius(0).outerRadius(radius);
 
     // Join New Data
     const slices = chartGroup.selectAll("path").data(pie(data));
@@ -95,11 +92,32 @@ function getChart1() {
   // Reading CSV
   d3.csv("../data/top_100_youtubers.csv").then((csvData) => {
     // Aggregate Data by Category
-    const categoryCounts = d3.rollups(
+    var categoryCounts = d3.rollups(
       csvData,
       (v) => v.length,
       (d) => d.Category
     );
+    console.log("Category Counts", categoryCounts);
+
+    const threshold = 5;
+    // Get Categories under the Threshold
+    let smallCategories = categoryCounts.filter(
+      ([category, count]) => count < threshold
+    );
+    console.log("Others Categories", smallCategories);
+
+    // Group Small Categories as "Others"
+    categoryCounts = categoryCounts.map(([category, count]) =>
+      count < threshold ? ["Others", count] : [category, count]
+    );
+
+    // Sum Up "Others" and Remove Duplicates
+    categoryCounts = d3.rollups(
+      categoryCounts,
+      (v) => d3.sum(v, (d) => d[1]),
+      (d) => d[0]
+    );
+    console.log("Filtered Category Counts", categoryCounts);
 
     // Compute Total for Percentage Calculation
     let pieData = categoryCounts.map(([category, count], i) => ({

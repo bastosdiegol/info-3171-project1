@@ -15,8 +15,10 @@ function getChart2() {
   const svg = d3
     .select("#chart-2")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", "100%")
+    .attr("height", "auto")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("preserveAspectRatio", "xMidYMid meet")
 
   // Chart Title
   svg
@@ -26,7 +28,7 @@ function getChart2() {
     .attr("text-anchor", "middle")
     .attr("font-size", "16px")
     .attr("font-weight", "bold")
-    .attr("fill","#FFBD59")
+    .attr("fill", PRIMARY_COLOUR)
     .text(chartTitle);
 
   // Group for Chart Area
@@ -68,8 +70,8 @@ function getChart2() {
       .tickFormat((d) => {
         if (d >= 1e9) return `${(d / 1e9).toFixed(1)}B`; // Billions
         if (d >= 1e6) return `${(d / 1e6).toFixed(1)}M`; // Millions
-        if (d >= 1e3) return `${(d / 1e3).toFixed(1)}K`;
-        return d;
+        if (d >= 1e3) return `${(d / 1e3).toFixed(1)}K`; // Thousands
+        return d; // Smaller than 1000
       });
 
     chartArea
@@ -103,7 +105,7 @@ function getChart2() {
       .attr("cx", (d) => xScale(d.followers))
       .attr("cy", (d) => yScale(d.Likes))
       .attr("r", 5)
-      .attr("fill", "#261C15")
+      .attr("fill", DARK_COLOUR)
       .attr("opacity", 0.7);
 
     // Calculate Linear Regression
@@ -127,7 +129,7 @@ function getChart2() {
       .attr("y1", yScale(lineData[0].y))
       .attr("x2", xScale(lineData[1].x))
       .attr("y2", yScale(lineData[1].y))
-      .attr("stroke", "#FFBD59")
+      .attr("stroke", PRIMARY_COLOUR)
       .attr("stroke-width", 2);
   });
 }

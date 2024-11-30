@@ -40,7 +40,7 @@ function getChart1() {
     const pie = d3.pie().value((d) => d.count);
 
     // Pie Settings
-    const arc = d3.arc().innerRadius(0).outerRadius(radius);
+    const arc = d3.arc().innerRadius(50).outerRadius(radius);
 
     // Join New Data
     const slices = chartGroup.selectAll("path").data(pie(data));
@@ -99,7 +99,7 @@ function getChart1() {
     );
     console.log("Category Counts", categoryCounts);
 
-    const threshold = 5;
+    const threshold = 4;
     // Get Categories under the Threshold
     let smallCategories = categoryCounts.filter(
       ([category, count]) => count < threshold
